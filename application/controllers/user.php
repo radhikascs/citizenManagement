@@ -75,7 +75,7 @@ class User extends BaseController
             $this->load->model('user_model');
             $data['roles'] = $this->user_model->getUserRoles();
             
-            $this->global['pageTitle'] = 'CodeInsect : Add New User';
+            $this->global['pageTitle'] = 'Add New User';
 
             $this->loadViews("addNew", $this->global, $data, NULL);
         }

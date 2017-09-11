@@ -48,8 +48,9 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="cpassword">Date of Birth</label>
-                                        <input type="password" class="form-control required equalTo" id="cpassword" name="cpassword" maxlength="10">
+                                        <label for="dob">Date of Birth</label>
+										 <input id="datepicker" class="form-control required" name="dob" maxlength="10"/>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -61,23 +62,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="role">Role</label>
-                                        <select class="form-control required" id="role" name="role">
-                                            <option value="0">Select Role</option>
-                                            <?php
-                                            if(!empty($roles))
-                                            {
-                                                foreach ($roles as $rl)
-                                                {
-                                                    ?>
-                                                    <option value="<?php echo $rl->roleId ?>"><?php echo $rl->role ?></option>
-                                                    <?php
-                                                }
-                                            }
-                                            ?>
-                                        </select>
-                                    </div>
+                                    
                                 </div>    
                             </div>
                         </div><!-- /.box-body -->
@@ -122,4 +107,15 @@
     </section>
     
 </div>
-<script src="<?php echo base_url(); ?>assets/js/addUser.js" type="text/javascript"></script>
+<script src="<?php echo base_url(); ?>assets/js/addUser.js" type="text/javascript">
+
+</script>
+
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $("#datepicker").datepicker();
+  });
+  </script>
